@@ -7,11 +7,11 @@ const ListItem = ({ text, delItem, editItem }) => {
         <p className="list-text">{text}</p>
 
         <div className="list-btn-wrapper">
-          <button onClick={() => editItem(text)} className="btn listbtn">
-            <i className="fas fa-edit" />
+          <button onClick={() => editItem(text)} className="btn  listbtn">
+            <i className="edited ion-edit edit" />
           </button>
-          <button onClick={() => delItem(text)} className="btn listbtn">
-            <i className="fas fa-trash" />
+          <button onClick={() => delItem(text)} className="btn  listbtn">
+            <i className="ion-trash-b trash" />
           </button>
         </div>
       </div>

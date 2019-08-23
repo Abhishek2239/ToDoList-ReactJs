@@ -59,6 +59,22 @@ const App = () => {
     handleClose();
   };
 
+  //key press enter
+ 
+    document.addEventListener('keypress',function(event){
+      if(event.keyCode===13||event.which===13){
+        if (input) {
+          setItems([input, ...items]);
+        }
+        setInput("");
+        console.log('enter')
+      }
+      
+    })
+    
+  
+
+
   return (
     <div className="App">
       <Modal
@@ -98,7 +114,6 @@ const App = () => {
         <button
           className="addBtn btn"
           onClick={addItem}
-          // onKeyDown={(event)=>addItemByKey(event)}
         >
           Add
         </button>
